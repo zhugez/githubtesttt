@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Tuần 9-20035581-Nguyễn Thị Thanh Thi/bootstrap-5.1.3-dist/">
+    <link href="../Tuần 9-20035581-Nguyễn Thị Thanh Thi/CSS/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <script src="../Tuần 9-20035581-Nguyễn Thị Thanh Thi/js/bootstrap.min.js"></script>
+    <script src="../Tuần 9-20035581-Nguyễn Thị Thanh Thi/bootstrap-5.1.3-dist/"></script>
+    <script src="../Tuần 9-20035581-Nguyễn Thị Thanh Thi/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <script>
+        // lấy phần Modal
+        var modal = document.getElementById('myModal');
+      
+        // Lấy phần button mở Modal
+        var btn = document.getElementById("#btn2");
+      
+        // Lấy phần span đóng Modal
+        var span = document.getElementsByClassName("close")[0];
+      
+        // Khi button được click thi mở Modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+      
+        // Khi span được click thì đóng Modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+      
+        // Khi click ngoài Modal thì đóng Modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="col-xs-12">
+            <img src="../Tuần 9-20035581-Nguyễn Thị Thanh Thi/IMG/banner-5.png" alt="" width="100%">
+        </div>
+    <div class="container">
+        <div class="col-md-12">
+            <header></header>
+        </div>
+        <div class="col-md-12">
+            <nav class="navbar-collapse">
+                <ul class="navbar-nav nav">
+                    <li><a href="#" id="dn">Đăng Nhập</a></li>
+                    <li><a href="#" id="myBtn" > Mở tour mới</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <section class="table-responsive">
+            <table class="table table-striped">
+                <caption><h4>DANH SÁCH TOUR- DU LỊCH VIỆT</h4></caption>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã Tour</th>
+                        <th>Hành Trình</th>
+                        <th>Ngày khởi hành</th>
+                        <th>Thời gian</th>
+                        <th>Giá Tour</th>
+                        
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <div class="modal fade" role="dialog" id="mymodal">
+        <div class="modal dialog" style="margin-top:10px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="text-left">DANH SÁCH TOUR-DU LỊCH VIỆT</h2>
+                </div>
+                <div class="modal-body">
+                    <form role="form" class="form horizontal" style="margin-top: 10px;">
+                        <label for="STT" class="control-label col-xs-3">Số thứ tự</label>
+                        <div class="col-xs-9">
+                            <input type="text" id="STT" class="form-control">
+                            <span class="text-danger" id="tbSTT">*</span>
+                        </div>
+                        <label for="Ma" class="control-label col-xs-3">Mã Tour</label>
+                        <div class="col-xs-9">
+                            <input type="text" id="Ma" class="form-control">
+                            <span class="text-danger" style="color: red;" id="tbMa">*</span>
+                        </div>
+                        <label for="HT" class="control-label col-xs-3">Hành Trình</label>
+                        <div class="col-xs-9">
+                            <input type="text" id="HT" class="form-control">
+                            <span class="text-danger" style="color: red"; id="tbHT">*</span>
+                        </div>
+                        <label for="NKH" class="control-label col-xs-3">Ngày khởi hành</label>
+                        <div class="col-xs-9">
+                            <input type="text" id="NKH" class="form-control">
+                            <span class="text-danger" style="color: red"; id="tbNKH">*</span>
+                        </div>
+                        <label for="TIME" class="control-label col-xs-3">Thời gian</label>
+                        <div class="col-xs-9">
+                            <input type="text" id="TIME" class="form-control">
+                            <span class="text-danger" style="color: red"; id="tbTIME">*</span>
+                        </div>
+                        <label for="GT" class="control-label col-xs-3">Giá Tour</label>
+                        <div class="col-xs-9">
+                            <input type="text" id="GT" class="form-control">
+                            <span class="text-danger" style="color: red"; id="GT">*</span>
+                        </div>
+                        <button class="btn btn-sucess btn-group-justified" id="Save" type="button" style="color: white; background-color: green; width: 100%;">
+                            Lưu
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-md-12">
+        <footer>SVTH: Nguyễn Thị Thanh Thi-MSSV: 20035581 Lớp DHCNTT16A</footer>
+    </div>
+</body>
+</html>
